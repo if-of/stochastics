@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.karazina.controller.Controller">
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox maxHeight="300.0" minHeight="300.0" prefHeight="300.0" prefWidth="200.0">
+                    <children>
+                        <LineChart fx:id="upDownChart" animated="false">
+                            <xAxis>
+                                <CategoryAxis side="BOTTOM" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis side="LEFT" />
+                            </yAxis>
+                        </LineChart>
+                        <LineChart fx:id="leftRightChart" animated="false">
+                            <xAxis>
+                                <CategoryAxis side="BOTTOM" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis side="LEFT" />
+                            </yAxis>
+                        </LineChart>
+                    </children>
+                </HBox>
+                <AnchorPane fx:id="chart3dAnchorPane" maxHeight="350.0" minHeight="350.0" prefHeight="350.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin></AnchorPane>
+            </children>
+        </VBox>
+    </center>
+    <left>
+        <VBox prefHeight="200.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+            <GridPane hgap="5.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="83.0" minWidth="10.0" prefWidth="64.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="10.0" prefWidth="112.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <padding>
+                    <Insets left="10.0" />
+                </padding>
+
+
+                <Label text="Count" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+
+                <Label text="Probability" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="Zone" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="Coordinates" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Label>
+
+                <Label text="Up" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label text="Down" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label text="Left" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label text="Right" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <Label text="Stop" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                <TextField fx:id="countField" text="1000" GridPane.columnIndex="1" />
+                <TextField fx:id="upProbabilityField" text="0.2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="downProbabilityField" text="0.2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="leftProbabilityField" text="0.2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <TextField fx:id="rightProbabilityField" text="0.2" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <TextField fx:id="stopProbabilityField" text="0.2" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <TextField text="20" GridPane.columnIndex="3" GridPane.rowIndex="2" fx:id="xLengthField" />
+                <TextField fx:id="yLengthField" text="30" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <TextField text="10" GridPane.columnIndex="3" GridPane.rowIndex="5" fx:id="xCoordinateField" />
+                <TextField fx:id="yCoordinateField" text="15" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                <Label text="X length" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Label text="Y length" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Label text="X" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <Label text="Y" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                <Button mnemonicParsing="false" onAction="#onStartButtonClick" prefHeight="26.0" prefWidth="154.0" text="Start" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+                <Button mnemonicParsing="false" onAction="#onStopButtonClick" prefHeight="26.0" prefWidth="87.0" text="Stop" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                <Button mnemonicParsing="false" onAction="#onPauseButtonClick" prefHeight="26.0" prefWidth="85.0" text="Pause" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                <Label text="Count" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="10" />
+                <Label text="Up percentage" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="11" />
+                <Label text="Down percentage" GridPane.columnSpan="2" GridPane.rowIndex="12" />
+                <Label text="Left percentage" GridPane.columnSpan="2" GridPane.rowIndex="13" />
+                <Label text="Right percentage" GridPane.columnSpan="2" GridPane.rowIndex="14" />
+                <Label text="Stop percentage" GridPane.columnSpan="2" GridPane.rowIndex="15" />
+                <Label fx:id="countLabel" text="0" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                <Label fx:id="upPercentageLabel" text="0.0" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                <Label fx:id="downPercentageLabel" text="0.0" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                <Label fx:id="leftPercentageLabel" text="0.0" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+                <Label fx:id="rightPercentageLabel" text="0.0" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+                <Label fx:id="stopPercentageLabel" text="0.0" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+                <ProgressBar fx:id="progressBar" prefHeight="18.0" prefWidth="341.0" progress="0.0" GridPane.columnSpan="4" GridPane.rowIndex="9" />
+            </GridPane>
+        </VBox>
+    </left>
+</BorderPane>
