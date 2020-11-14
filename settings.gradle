@@ -1,3 +1,4 @@
 rootProject.name = 'Stochastics'
 include 'lab1'
+include 'lab2'
 
