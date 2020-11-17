@@ -114,10 +114,10 @@
                 <TextField fx:id="leftProbabilityField" text="0.2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                 <TextField fx:id="rightProbabilityField" text="0.2" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                 <TextField fx:id="stopProbabilityField" text="0.2" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                <TextField text="20" GridPane.columnIndex="3" GridPane.rowIndex="2" fx:id="xLengthField" />
-                <TextField fx:id="yLengthField" text="30" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                <TextField text="10" GridPane.columnIndex="3" GridPane.rowIndex="5" fx:id="xCoordinateField" />
-                <TextField fx:id="yCoordinateField" text="15" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                <TextField text="21" GridPane.columnIndex="3" GridPane.rowIndex="2" fx:id="xLengthField" />
+                <TextField fx:id="yLengthField" text="31" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <TextField text="12" GridPane.columnIndex="3" GridPane.rowIndex="5" fx:id="xCoordinateField" />
+                <TextField fx:id="yCoordinateField" text="16" GridPane.columnIndex="3" GridPane.rowIndex="6" />
                 <Label text="X length" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                 <Label text="Y length" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                 <Label text="X" GridPane.columnIndex="2" GridPane.rowIndex="5" />
