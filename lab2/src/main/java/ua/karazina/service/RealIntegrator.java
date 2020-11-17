@@ -18,7 +18,14 @@ public class RealIntegrator {
 
     public double integrate() {
         double x = (a * (1.0 / 6));
-        double y = (-1.0 / u) * (exp(-1.0 * u) - 1);
+
+        double y;
+        if (u != 0) {
+            y = (-1.0 / u) * (exp(-1.0 * u) - 1);
+        } else {
+            y = exp(0);
+        }
+
         double z = (-1.0 / (PI * k)) * (cos(PI * k) - 1);
 
         return x * y * z;

@@ -59,6 +59,17 @@ public class Controller {
     private Label stopPercentageLabel;
 
     @FXML
+    private Label upMovePercentageLabel;
+    @FXML
+    private Label downMovePercentageLabel;
+    @FXML
+    private Label leftMovePercentageLabel;
+    @FXML
+    private Label rightMovePercentageLabel;
+    @FXML
+    private Label stopMovePercentageLabel;
+
+    @FXML
     private AnchorPane chart3dAnchorPane;
     @FXML
     private LineChart leftRightChart;
@@ -143,7 +154,8 @@ public class Controller {
         leftRightChart.getData().clear();
 
         countLabel.setText("" + stochasticCalculator.getCurrentCount());
-        printStatistics(stochasticCalculator.getQuiteProbability());
+        printStopStatistics(stochasticCalculator.getQuiteProbability());
+        printMoveStatistics(stochasticCalculator.getMoveProbability());
         draw2dChart(stochasticCalculator.getTopEnd(), "top", upDownChart);
         draw2dChart(stochasticCalculator.getBottomEnd(), "down", upDownChart);
         draw2dChart(stochasticCalculator.getLeftEnd(), "left", leftRightChart);
@@ -151,7 +163,15 @@ public class Controller {
         drawStopValues3dChart(stochasticCalculator.getStopValues());
     }
 
-    private void printStatistics(Probability probability) {
+    private void printMoveStatistics(Probability probability) {
+        upMovePercentageLabel.setText("" + probability.getPTop());
+        downMovePercentageLabel.setText("" + probability.getPBottom());
+        leftMovePercentageLabel.setText("" + probability.getPLeft());
+        rightMovePercentageLabel.setText("" + probability.getPRight());
+        stopMovePercentageLabel.setText("" + probability.getPStop());
+    }
+
+    private void printStopStatistics(Probability probability) {
         upPercentageLabel.setText("" + probability.getPTop());
         downPercentageLabel.setText("" + probability.getPBottom());
         leftPercentageLabel.setText("" + probability.getPLeft());

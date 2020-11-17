@@ -37,6 +37,12 @@ public class StochasticCalculator {
     private int qBottom = 0;
     private int qStop = 0;
 
+    private int leftMove = 0;
+    private int topMove = 0;
+    private int rightMove = 0;
+    private int bottomMove = 0;
+    private int stopMove = 0;
+
     @Getter
     private double[] leftEnd;
     @Getter
@@ -89,6 +95,16 @@ public class StochasticCalculator {
         );
     }
 
+    public Probability getMoveProbability() {
+        return new Probability(
+                (double) leftMove / currentCount,
+                (double) topMove / currentCount,
+                (double) rightMove / currentCount,
+                (double) bottomMove / currentCount,
+                (double) stopMove / currentCount
+        );
+    }
+
     public boolean isDone() {
         return currentCount >= count;
     }
@@ -116,22 +132,27 @@ public class StochasticCalculator {
 
                 if (stop) {
                     qStop++;
+                    stopMove++;
                     stopValues[xCurrent][yCurrent]++;
                     break;
                 } else if (yCurrent >= yLength) {
                     qTop++;
+                    topMove++;
                     topEnd[xCurrent]++;
                     break;
                 } else if (yCurrent < 0) {
                     qBottom++;
+                    bottomMove++;
                     bottomEnd[xCurrent]++;
                     break;
                 } else if (xCurrent >= xLength) {
                     qRight++;
+                    rightMove++;
                     rightEnd[yCurrent]++;
                     break;
                 } else if (xCurrent < 0) {
                     qLeft++;
+                    leftMove++;
                     leftEnd[yCurrent]++;
                     break;
                 }
