@@ -138,11 +138,11 @@
                 <Label fx:id="rightPercentageLabel" text="0.0" GridPane.columnIndex="2" GridPane.rowIndex="14" />
                 <Label fx:id="stopPercentageLabel" text="0.0" GridPane.columnIndex="2" GridPane.rowIndex="15" />
 
-                <Label text="Up move percentage" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="17" />
-                <Label text="Down move percentage" GridPane.columnSpan="2" GridPane.rowIndex="18" />
-                <Label text="Left move percentage" GridPane.columnSpan="2" GridPane.rowIndex="19" />
-                <Label text="Right move percentage" GridPane.columnSpan="2" GridPane.rowIndex="20" />
-                <Label text="Stop percentage" GridPane.columnSpan="2" GridPane.rowIndex="21" />
+                <Label text="Up move average count" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="17" />
+                <Label text="Down move average count" GridPane.columnSpan="2" GridPane.rowIndex="18" />
+                <Label text="Left move average count" GridPane.columnSpan="2" GridPane.rowIndex="19" />
+                <Label text="Right move average count" GridPane.columnSpan="2" GridPane.rowIndex="20" />
+                <Label text="Stop average count" GridPane.columnSpan="2" GridPane.rowIndex="21" />
                 <Label fx:id="upMovePercentageLabel" text="0.0" GridPane.columnIndex="2" GridPane.rowIndex="17" />
                 <Label fx:id="downMovePercentageLabel" text="0.0" GridPane.columnIndex="2" GridPane.rowIndex="18" />
                 <Label fx:id="leftMovePercentageLabel" text="0.0" GridPane.columnIndex="2" GridPane.rowIndex="19" />

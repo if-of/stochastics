@@ -120,39 +120,39 @@ public class StochasticCalculator {
 
                 if (g < pLeft) {
                     xCurrent--;
+                    leftMove++;
                 } else if (g < (pLeft + pTop)) {
                     yCurrent++;
+                    topMove++;
                 } else if (g < (pLeft + pTop + pRight)) {
                     xCurrent++;
+                    rightMove++;
                 } else if (g < (pLeft + pTop + pRight + pBottom)) {
                     yCurrent--;
+                    bottomMove++;
                 } else {
                     stop = true;
+                    stopMove++;
                 }
 
                 if (stop) {
                     qStop++;
-                    stopMove++;
                     stopValues[xCurrent][yCurrent]++;
                     break;
                 } else if (yCurrent >= yLength) {
                     qTop++;
-                    topMove++;
                     topEnd[xCurrent]++;
                     break;
                 } else if (yCurrent < 0) {
                     qBottom++;
-                    bottomMove++;
                     bottomEnd[xCurrent]++;
                     break;
                 } else if (xCurrent >= xLength) {
                     qRight++;
-                    rightMove++;
                     rightEnd[yCurrent]++;
                     break;
                 } else if (xCurrent < 0) {
                     qLeft++;
-                    leftMove++;
                     leftEnd[yCurrent]++;
                     break;
                 }
