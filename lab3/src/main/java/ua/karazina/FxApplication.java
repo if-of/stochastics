@@ -12,7 +12,7 @@ public class FxApplication extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample.fxml"));
         stage.setTitle("Lab3");
-        stage.setScene(new Scene(root, 604, 204));
+        stage.setScene(new Scene(root, 804, 164));
         stage.show();
     }
 

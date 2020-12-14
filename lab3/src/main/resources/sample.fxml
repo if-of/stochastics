@@ -5,98 +5,58 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="204.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.karazina.controller.Controller">
-   <columnConstraints>
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="0.0" prefWidth="150.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="0.0" prefWidth="150.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="0.0" prefWidth="150.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="0.0" prefWidth="150.0" />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints minHeight="0.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="100.0" minHeight="0.0" prefHeight="50" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="100.0" minHeight="0.0" prefHeight="50" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="100.0" minHeight="0.0" prefHeight="50" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="100.0" minHeight="0.0" prefHeight="50" vgrow="SOMETIMES" />
-   </rowConstraints>
-   <children>
-      <Label text="Model parameters" />
-      <Label prefHeight="36.0" prefWidth="174.0" text="Interaction parameters" GridPane.columnIndex="1" />
-      <Label text="Average values" GridPane.columnIndex="2" />
-      <Label text="Uncertainty" GridPane.columnIndex="3" />
-      <FlowPane GridPane.columnIndex="3" GridPane.rowIndex="1">
-         <children>
-            <Label text=" " />
-            <TextField fx:id="uncertaintyZeroField" text="0" />
-         </children>
-      </FlowPane>
-      <FlowPane GridPane.columnIndex="3" GridPane.rowIndex="2">
-         <children>
-            <Label text=" " />
-            <TextField fx:id="uncertaintyOneField" text="0" />
-         </children>
-      </FlowPane>
-      <FlowPane GridPane.columnIndex="3" GridPane.rowIndex="3">
-         <children>
-            <Label text=" " />
-            <TextField fx:id="uncertaintySecondField" text="0" />
-         </children>
-      </FlowPane>
-      <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-         <children>
-            <Label text="Angle of incidence -" />
-            <TextField fx:id="angleOfIncidenceField" text="45" />
-         </children></FlowPane>
-      <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-         <children>
-            <Label text="Mean free path -" />
-            <TextField fx:id="meanFreePathField" text="1" />
-         </children></FlowPane>
-      <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-         <children>
-            <Label text="Transmission ratio -" />
-            <TextField fx:id="transmissionRatioField" text="0" />
-         </children></FlowPane>
-      <FlowPane prefHeight="209.0" prefWidth="152.0" GridPane.rowIndex="2">
-         <children>
-            <Label text="Layer thickness  - " />
-            <TextField fx:id="layerThicknessField" text="2" />
-         </children></FlowPane>
-      <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-         <children>
-            <Label text="Absorption prob. -" />
-            <TextField fx:id="absorptionProbField" text="0.001" />
-         </children></FlowPane>
-      <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-         <children>
-            <Label text="Reflection coeff. - " />
-            <TextField fx:id="reflectionCoeffField" text="0" />
-         </children></FlowPane>
-      <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-         <children>
-            <Label text="Scatter parameter -" />
-            <TextField fx:id="scatterParameterField" text="1" />
-         </children></FlowPane>
-      <Label text="---" GridPane.rowIndex="3" />
-      <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
-         <children>
-            <Label text="Absorption coeff.-" />
-            <TextField fx:id="absorptionCoeffField" text="0" />
-         </children>
-      </FlowPane>
-      <Label text="Modeling results" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
-         <font>
-            <Font size="24.0" />
-         </font></Label>
-      <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
-         <children>
-            <Label text="Statistics   - " />
-            <TextField fx:id="statisticsField" text="10000" />
-         </children>
-      </FlowPane>
-      <Button mnemonicParsing="false" onAction="#onStartButtonClick" text="Start" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-   </children>
-   <padding>
-      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-   </padding>
+<GridPane hgap="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="164.0" prefWidth="600.0" vgap="1.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.karazina.controller.Controller">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="0.0" prefWidth="113.4" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="60.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="0.0" prefWidth="122.60000000000002" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="60.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="0.0" prefWidth="134.2" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="70.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.0" minWidth="0.0" prefWidth="70.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="100.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="100.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="100.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="100.0" minHeight="0.0" prefHeight="40.4" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Label text="Model parameters" textFill="#0022ff" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+        <Label prefHeight="24.0" prefWidth="126.0" text="Interaction parameters" textFill="GREEN" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+        <Label text="Average values" textFill="RED" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+        <Label text="Uncertainty" textFill="RED" GridPane.columnIndex="6" />
+        <TextField fx:id="uncertaintyZeroField" prefHeight="26.0" prefWidth="60.0" text="0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+        <TextField fx:id="uncertaintyOneField" prefHeight="26.0" prefWidth="60.0" text="0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+        <TextField fx:id="uncertaintySecondField" prefHeight="26.0" prefWidth="60.0" text="0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+        <Label text="Mean free path -" textFill="GREEN" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <Label text="Angle of incidence -" textFill="#0022ff" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <Label text="Transmission ratio -" textFill="RED" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <Label text="Absorption prob. -" textFill="GREEN" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+        <Label text="Layer thickness  - " textFill="#0022ff" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+        <Label text="Reflection coeff. - " textFill="RED" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+        <Label text="---" textFill="#0022ff" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+        <Label text="Absorption coeff.-" textFill="RED" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+        <Label text="Modeling results" textFill="RED" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Button mnemonicParsing="false" onAction="#onStartButtonClick" prefHeight="26.0" prefWidth="172.0" text="Start" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+        <TextField fx:id="transmissionRatioField" prefHeight="26.0" prefWidth="60.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+        <TextField fx:id="reflectionCoeffField" prefHeight="26.0" prefWidth="60.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+        <TextField fx:id="absorptionCoeffField" prefHeight="26.0" prefWidth="60.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+        <TextField fx:id="layerThicknessField" prefHeight="26.0" prefWidth="60.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="statisticsField" prefHeight="26.0" prefWidth="60.0" text="10000" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField fx:id="angleOfIncidenceField" prefHeight="26.0" prefWidth="60.0" text="45" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="scatterParameterField" prefHeight="26.0" prefWidth="60.0" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+        <TextField fx:id="absorptionProbField" prefHeight="26.0" prefWidth="60.0" text="0.001" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <TextField fx:id="meanFreePathField" prefHeight="26.0" prefWidth="60.0" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Label text="Statistics   - " textFill="#0022ff" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+        <Label text="Scatter parameter -" textFill="GREEN" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+    </children>
+    <padding>
+        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+    </padding>
 </GridPane>
